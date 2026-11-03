@@ -5,7 +5,7 @@
 
 <h3><code>sayanos-06@github ~ $ ./contributions.sh</code></h3>
 
-<img src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/contrib-heatmap.svg?v=7e9836557f8e7a2a" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
+<img src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/contrib-heatmap.svg?v=9cfa7332e5b576ea" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
 
 <br>
 <br>
