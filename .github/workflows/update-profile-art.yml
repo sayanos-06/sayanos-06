@@ -26,6 +26,8 @@ jobs:
       GH_PROFILE_USER: sayanos-06
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -45,5 +47,6 @@ jobs:
           git add data/contributions.json contrib-heatmap.svg stats.svg avi-ascii.svg
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh profile contribution art'
+            git pull --rebase origin main
             git push
           fi
