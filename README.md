@@ -5,7 +5,7 @@
 
 <h3><code>sayanos-06@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg?v=f808b0197bc6d6a4" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
+<img src="./contrib-heatmap.svg?v=c241616851fc7ad2" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
 
 <br>
 <br>
@@ -20,7 +20,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./avi-ascii.svg?v=ae96e7a74521bd4e" width="420" alt="Knight avatar — ASCII art" /></td>
-<td valign="top"><img src="./stats.svg?v=06f6c4795be277e0" width="420" alt="Sayantan's GitHub streak and contribution stats — auto-refreshed daily" /></td>
+<td valign="top"><img src="./stats.svg?v=0ed730643335bca1" width="420" alt="Sayantan's GitHub streak and contribution stats — auto-refreshed daily" /></td>
 </tr>
 </table>
 
@@ -38,6 +38,6 @@
 
 <br>
 
-<p><sub>Contribution graphics show public activity from GitHub’s rolling calendar. Private activity visible while signed in may differ. Refreshed daily at approximately 06:53 IST by GitHub Actions.</sub></p>
+<p><sub>Contribution graphics use GitHub’s rolling calendar, including anonymous private contribution counts when enabled in your profile settings. Refreshed daily at approximately 06:53 IST by GitHub Actions.</sub></p>
 
 </div>
