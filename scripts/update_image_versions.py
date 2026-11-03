@@ -9,8 +9,8 @@ text = readme.read_text(encoding="utf-8")
 for name in ("contrib-heatmap.svg", "stats.svg", "avi-ascii.svg"):
     digest = hashlib.sha256((root / name).read_bytes()).hexdigest()[:16]
     text, count = re.subn(
-        rf'src="\./{re.escape(name)}(?:\?v=[^"\s]*)?"',
-        f'src="./{name}?v={digest}"', text,
+        rf'src="(?:\./|https://raw\.githubusercontent\.com/sayanos-06/sayanos-06/main/){re.escape(name)}(?:\?v=[^"\s]*)?"',
+        f'src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/{name}?v={digest}"', text,
     )
     if count != 1:
         raise ValueError(f"Expected one README image for {name}, found {count}")
