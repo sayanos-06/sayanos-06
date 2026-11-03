@@ -5,7 +5,7 @@
 
 <h3><code>sayanos-06@github ~ $ ./contributions.sh</code></h3>
 
-<img src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/contrib-heatmap.svg?v=9cfa7332e5b576ea" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
+<img src="./assets/contrib-heatmap-9cfa7332e5b576ea.svg" width="860" alt="Sayantan's GitHub contribution graph — auto-refreshed daily" />
 
 <br>
 <br>
@@ -19,8 +19,8 @@
 
 <table>
 <tr>
-<td valign="top"><img src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/avi-ascii.svg?v=ae96e7a74521bd4e" width="420" alt="Knight avatar — ASCII art" /></td>
-<td valign="top"><img src="https://raw.githubusercontent.com/sayanos-06/sayanos-06/main/stats.svg?v=75124b5f9a7d1664" width="420" alt="Sayantan's GitHub streak and contribution stats — auto-refreshed daily" /></td>
+<td valign="top"><img src="./assets/avi-ascii-ae96e7a74521bd4e.svg" width="420" alt="Knight avatar — ASCII art" /></td>
+<td valign="top"><img src="./assets/stats-75124b5f9a7d1664.svg" width="420" alt="Sayantan's GitHub streak and contribution stats — auto-refreshed daily" /></td>
 </tr>
 </table>
 
