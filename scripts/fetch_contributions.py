@@ -37,6 +37,7 @@ def fetch_days():
         date = td.get("data-date")
         if not date:
             continue
+        datetime.date.fromisoformat(date)
         td_id = td.get("id")
         tooltip_el = soup.find("tool-tip", attrs={"for": td_id}) if td_id else None
         text = tooltip_el.get_text(strip=True) if tooltip_el else ""
@@ -44,10 +45,17 @@ def fetch_days():
             count = 0
         else:
             m = re.match(r"(\d+)", text)
-            count = int(m.group(1)) if m else 0
+            if not m:
+                raise ValueError(f"Missing contribution count for {date}; keeping existing snapshot")
+            count = int(m.group(1))
         days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
 
     days.sort(key=lambda d: d["date"])
+    if not days:
+        raise ValueError("No dated contribution cells found")
+    dates = [datetime.date.fromisoformat(d["date"]) for d in days]
+    if any(b - a != datetime.timedelta(days=1) for a, b in zip(dates, dates[1:])):
+        raise ValueError("Contribution calendar has duplicate or missing dates")
     return days
 
 
@@ -99,7 +107,7 @@ def build_data(days):
 
     return {
         "username": USERNAME,
-        "generated_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "range": {"start": days[0]["date"], "end": days[-1]["date"]},
         "total_contributions": total,
         "active_days": active_days,
@@ -116,7 +124,7 @@ if __name__ == "__main__":
     days = fetch_days()
     data = build_data(days)
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-    with open(OUT_PATH, "w") as f:
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     print(f"wrote {OUT_PATH}: {data['total_contributions']} contributions, "
           f"current streak {data['current_streak']['length']}, "

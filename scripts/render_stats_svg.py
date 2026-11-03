@@ -68,7 +68,7 @@ n_days = len(data["days"])
 tiles = [
     ("current streak", cur["length"], " days", span(cur), GREEN),
     ("longest streak", lng["length"], " days", span(lng), INK),
-    ("contributions", data["total_contributions"], "", "in the last year", INK),
+    ("contributions", data["total_contributions"], "", "public, in the last year", INK),
     ("active days", data["active_days"], f" / {n_days}", f'{data["active_days"] / n_days:.0%} of the year', INK),
     ("best day", best["count"], "", short(best["date"]), INK),
     ("avg / active day", data["avg_per_active_day"], "", "contributions", INK),
@@ -99,7 +99,7 @@ parts = [
 for i, dot in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
     parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dot}"/>')
 parts.append(f'<text x="{W/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
-             f'text-anchor="middle">avi@github: ~$ ./stats.sh</text>')
+             f'text-anchor="middle">sayanos-06@github: ~$ ./stats.sh</text>')
 
 # ---- stat tiles ----------------------------------------------------------
 for i, (label, value, suffix, caption, accent) in enumerate(tiles):
